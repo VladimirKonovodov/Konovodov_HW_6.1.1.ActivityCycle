@@ -1,0 +1,2 @@
+rootProject.name='Konovodov_HW_6.1.1.ActivityCycle'
+include ':app'
