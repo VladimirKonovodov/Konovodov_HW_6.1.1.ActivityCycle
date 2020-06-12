@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             log("onCreate (" + savedInstanceState + ")" + " Bundle - null");
         } else {
-            log("onCreate (" + savedInstanceState + ")"+ " Bundle - not null");
+            log("onCreate (" + savedInstanceState + ")" + " Bundle - not null");
         }
 
 
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         log("onKeyDown()");
         textView.append("\n" + "onKeyDown()");
-         return super.onKeyDown(keyCode, event);
+        return super.onKeyDown(keyCode, event);
         //return true;
     }
 
@@ -126,17 +126,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onSaveInstanceState(@NonNull Bundle outState) {
-        log("onSaveInstanceState() "+ " сохранили информацию в Bundle");
-        textView.append("\n" + "onSaveInstanceState()" );
+        log("onSaveInstanceState() " + " сохранили информацию в Bundle");
+        textView.append("\n" + "onSaveInstanceState()");
         outState.putString(KEY_BUNDLE, textView.getText().toString());
         super.onSaveInstanceState(outState);
     }
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
-        log("onRestoreInstanceState()" +" восстановили информацию из Bundle");
+        log("onRestoreInstanceState()" + " восстановили информацию из Bundle");
         //textView.append("\n" + "onRestoreInstanceState()");
-        textView.setText(savedInstanceState.getString(KEY_BUNDLE)+ "\nonRestoreInstanceState()");
+        textView.setText(savedInstanceState.getString(KEY_BUNDLE) + "\nonRestoreInstanceState()");
         super.onRestoreInstanceState(savedInstanceState);
 
     }
